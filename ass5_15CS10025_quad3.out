@@ -1,0 +1,138 @@
+  0. swap Starts
+  1. t000 = * a
+  2. t = t000
+  3. t001 = * b
+  4. * a = t001
+  5. * b = t
+  6. swap Ends
+  7. partition Starts
+  8. t002 = h * 4
+  9. t003 = arr[t002]
+ 10. x = t003
+ 11. t004 = 1
+ 12. t005 = l - t004
+ 13. i = t005
+ 14. j = l
+ 15. t006 = 1
+ 16. t007 = h - t006
+ 17. if (j <= t007) goto 23
+ 18. goto 39
+ 19. goto 39
+ 20. t008 = j
+ 21. j = j + 1
+ 22. goto 15
+ 23. t009 = j * 4
+ 24. t010 = arr[t009]
+ 25. if (t010 <= x) goto 28
+ 26. goto 20
+ 27. goto 38
+ 28. t011 = i
+ 29. i = i + 1
+ 30. t012 = i * 4
+ 31. t013 = arr + t012
+ 32. t014 = j * 4
+ 33. t015 = arr + t014
+ 34. param t015
+ 35. param t013
+ 36. t016 = call swap, 2
+ 37. goto 20
+ 38. goto 20
+ 39. t017 = 1
+ 40. t018 = i + t017
+ 41. t019 = t018 * 4
+ 42. t020 = arr + t019
+ 43. t021 = h * 4
+ 44. t022 = arr + t021
+ 45. param t022
+ 46. param t020
+ 47. t023 = call swap, 2
+ 48. t024 = 1
+ 49. t025 = i + t024
+ 50. return t025
+ 51. partition Ends
+ 52. quickSort Starts
+ 53. if (l < h) goto 56
+ 54. goto 74
+ 55. goto 74
+ 56. param h
+ 57. param l
+ 58. param arr
+ 59. t026 = call partition, 3
+ 60. p = t026
+ 61. t027 = 1
+ 62. t028 = p - t027
+ 63. param t028
+ 64. param l
+ 65. param arr
+ 66. t029 = call quickSort, 3
+ 67. t030 = 1
+ 68. t031 = p + t030
+ 69. param h
+ 70. param t031
+ 71. param arr
+ 72. t032 = call quickSort, 3
+ 73. goto 74
+ 74. quickSort Ends
+ 75. printArray Starts
+ 76. t033 = 0
+ 77. i = t033
+ 78. if (i < size) goto 84
+ 79. goto 91
+ 80. goto 91
+ 81. t034 = i
+ 82. i = i + 1
+ 83. goto 78
+ 84. t035 = i * 4
+ 85. t036 = arr[t035]
+ 86. param t036
+ 87. t037 = call printi, 1
+ 88. param .LC0
+ 89. t038 = call prints, 1
+ 90. goto 81
+ 91. param .LC1
+ 92. t039 = call prints, 1
+ 93. printArray Ends
+ 94. main Starts
+ 95. param .LC2
+ 96. t040 = call prints, 1
+ 97. t041 = 50
+ 98. param .LC3
+ 99. t042 = call prints, 1
+100. t043 = & err
+101. param t043
+102. t044 = call readi, 1
+103. n = t044
+104. t045 = 0
+105. i = t045
+106. if (i < n) goto 112
+107. goto 118
+108. goto 118
+109. t046 = i
+110. i = i + 1
+111. goto 106
+112. t047 = i * 4
+113. t048 = & err
+114. param t048
+115. t049 = call readi, 1
+116. arr[t047] = t049
+117. goto 109
+118. param .LC4
+119. t050 = call prints, 1
+120. param n
+121. param arr
+122. t051 = call printArray, 2
+123. t052 = 0
+124. t053 = 1
+125. t054 = n - t053
+126. param t054
+127. param t052
+128. param arr
+129. t055 = call quickSort, 3
+130. param .LC5
+131. t056 = call prints, 1
+132. param n
+133. param arr
+134. t057 = call printArray, 2
+135. t058 = 0
+136. return t058
+137. main Ends

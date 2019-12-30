@@ -1,0 +1,22 @@
+
+
+int printd( float a);
+
+double** addMatrix(double a[][2], double b[][2])
+{
+	double **c;
+	c = a;
+	c[0][0]=a[0][0] + b[0][0];
+	return c;
+}
+
+int main()
+{
+	double a[2][2] = {1.0,2.0,3.0,4.0};
+	double b[2][2] = {2.0,3.0,4.0,5.0};
+	double **c;
+	c = addMatrix(a,b);
+	
+	printd(c[0][0]);
+	
+}

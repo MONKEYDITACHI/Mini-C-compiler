@@ -1,0 +1,112 @@
+  0. swap Starts
+  1. t000 = * xp
+  2. temp = t000
+  3. t001 = * yp
+  4. * xp = t001
+  5. * yp = temp
+  6. swap Ends
+  7. bubbleSort Starts
+  8. t002 = 0
+  9. i = t002
+ 10. if (i < n) goto 16
+ 11. goto 48
+ 12. goto 48
+ 13. t003 = i
+ 14. i = i + 1
+ 15. goto 10
+ 16. t004 = 0
+ 17. j = t004
+ 18. t005 = n - i
+ 19. t006 = 1
+ 20. t007 = t005 - t006
+ 21. if (j < t007) goto 27
+ 22. goto 13
+ 23. goto 47
+ 24. t008 = j
+ 25. j = j + 1
+ 26. goto 18
+ 27. t009 = j * 4
+ 28. t010 = arr[t009]
+ 29. t011 = 1
+ 30. t012 = j + t011
+ 31. t013 = t012 * 4
+ 32. t014 = arr[t013]
+ 33. if (t010 > t014) goto 36
+ 34. goto 24
+ 35. goto 46
+ 36. t015 = j * 4
+ 37. t016 = arr + t015
+ 38. t017 = 1
+ 39. t018 = j + t017
+ 40. t019 = t018 * 4
+ 41. t020 = arr + t019
+ 42. param t020
+ 43. param t016
+ 44. t021 = call swap, 2
+ 45. goto 24
+ 46. goto 24
+ 47. goto 13
+ 48. bubbleSort Ends
+ 49. printArray Starts
+ 50. t022 = 0
+ 51. i = t022
+ 52. if (i < size) goto 58
+ 53. goto 65
+ 54. goto 65
+ 55. t023 = i
+ 56. i = i + 1
+ 57. goto 52
+ 58. t024 = i * 4
+ 59. t025 = arr[t024]
+ 60. param t025
+ 61. t026 = call printi, 1
+ 62. param .LC0
+ 63. t027 = call prints, 1
+ 64. goto 55
+ 65. param .LC1
+ 66. t028 = call prints, 1
+ 67. printArray Ends
+ 68. main Starts
+ 69. param .LC2
+ 70. t029 = call prints, 1
+ 71. t030 = 50
+ 72. t031 = 3
+ 73. err = t031
+ 74. param .LC3
+ 75. t032 = call prints, 1
+ 76. t033 = & err
+ 77. param t033
+ 78. t034 = call readi, 1
+ 79. n = t034
+ 80. param .LC4
+ 81. t035 = call prints, 1
+ 82. t036 = 0
+ 83. i = t036
+ 84. if (i < n) goto 90
+ 85. goto 96
+ 86. goto 96
+ 87. i = i + 1
+ 88. t037 = i
+ 89. goto 84
+ 90. t038 = i * 4
+ 91. t039 = & err
+ 92. param t039
+ 93. t040 = call readi, 1
+ 94. arr[t038] = t040
+ 95. goto 87
+ 96. param .LC5
+ 97. t041 = call prints, 1
+ 98. param n
+ 99. param arr
+100. t042 = call printArray, 2
+101. param n
+102. param arr
+103. t043 = call bubbleSort, 2
+104. param .LC6
+105. t044 = call prints, 1
+106. param n
+107. param arr
+108. t045 = call printArray, 2
+109. t046 = 0
+110. return t046
+111. main Ends

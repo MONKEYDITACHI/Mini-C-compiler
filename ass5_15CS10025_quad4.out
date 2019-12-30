@@ -1,0 +1,114 @@
+  0. lis Starts
+  1. t000 = 50
+  2. t001 = 0
+  3. max = t001
+  4. t002 = 0
+  5. i = t002
+  6. if (i < n) goto 12
+  7. goto 16
+  8. goto 16
+  9. t003 = i
+ 10. i = i + 1
+ 11. goto 6
+ 12. t004 = i * 4
+ 13. t005 = 1
+ 14. dp[t004] = t005
+ 15. goto 9
+ 16. t006 = 1
+ 17. i = t006
+ 18. if (i < n) goto 24
+ 19. goto 56
+ 20. goto 56
+ 21. t007 = i
+ 22. i = i + 1
+ 23. goto 18
+ 24. t008 = 0
+ 25. j = t008
+ 26. if (j < i) goto 32
+ 27. goto 21
+ 28. goto 55
+ 29. t009 = j
+ 30. j = j + 1
+ 31. goto 26
+ 32. t010 = i * 4
+ 33. t011 = arr[t010]
+ 34. t012 = j * 4
+ 35. t013 = arr[t012]
+ 36. if (t011 > t013) goto 38
+ 37. goto 29
+ 38. t014 = i * 4
+ 39. t015 = dp[t014]
+ 40. t016 = j * 4
+ 41. t017 = dp[t016]
+ 42. t018 = 1
+ 43. t019 = t017 + t018
+ 44. if (t015 < t019) goto 47
+ 45. goto 29
+ 46. goto 54
+ 47. t020 = i * 4
+ 48. t021 = j * 4
+ 49. t022 = dp[t021]
+ 50. t023 = 1
+ 51. t024 = t022 + t023
+ 52. dp[t020] = t024
+ 53. goto 29
+ 54. goto 29
+ 55. goto 21
+ 56. t025 = 0
+ 57. i = t025
+ 58. if (i < n) goto 64
+ 59. goto 74
+ 60. goto 74
+ 61. t026 = i
+ 62. i = i + 1
+ 63. goto 58
+ 64. t027 = i * 4
+ 65. t028 = dp[t027]
+ 66. if (max < t028) goto 69
+ 67. goto 61
+ 68. goto 73
+ 69. t029 = i * 4
+ 70. t030 = dp[t029]
+ 71. max = t030
+ 72. goto 61
+ 73. goto 61
+ 74. return max
+ 75. lis Ends
+ 76. main Starts
+ 77. t031 = 50
+ 78. param .LC0
+ 79. t032 = call prints, 1
+ 80. param .LC1
+ 81. t033 = call prints, 1
+ 82. t034 = & err
+ 83. param t034
+ 84. t035 = call readi, 1
+ 85. n = t035
+ 86. param .LC2
+ 87. t036 = call prints, 1
+ 88. t037 = 0
+ 89. i = t037
+ 90. if (i < n) goto 96
+ 91. goto 102
+ 92. goto 102
+ 93. t038 = i
+ 94. i = i + 1
+ 95. goto 90
+ 96. t039 = i * 4
+ 97. t040 = & err
+ 98. param t040
+ 99. t041 = call readi, 1
+100. arr[t039] = t041
+101. goto 93
+102. param .LC3
+103. t042 = call prints, 1
+104. param n
+105. param arr
+106. t043 = call lis, 2
+107. param t043
+108. t044 = call printi, 1
+109. param .LC4
+110. t045 = call prints, 1
+111. t046 = 0
+112. return t046
+113. main Ends

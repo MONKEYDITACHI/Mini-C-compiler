@@ -1,0 +1,105 @@
+  0. fib Starts
+  1. t000 = 1
+  2. if (n <= t000) goto 5
+  3. goto 7
+  4. goto 7
+  5. return n
+  6. goto 7
+  7. t001 = 1
+  8. t002 = n - t001
+  9. param t002
+ 10. t003 = call fib, 1
+ 11. t004 = 2
+ 12. t005 = n - t004
+ 13. param t005
+ 14. t006 = call fib, 1
+ 15. t007 = t003 + t006
+ 16. return t007
+ 17. fib Ends
+ 18. fact Starts
+ 19. t008 = 1
+ 20. if (n <= t008) goto 23
+ 21. goto 26
+ 22. goto 26
+ 23. t009 = 1
+ 24. return t009
+ 25. goto 26
+ 26. t010 = 1
+ 27. t011 = n - t010
+ 28. param t011
+ 29. t012 = call fact, 1
+ 30. t013 = n * t012
+ 31. return t013
+ 32. fact Ends
+ 33. main Starts
+ 34. param .LC0
+ 35. t014 = call prints, 1
+ 36. t015 = 20
+ 37. t016 = 20
+ 38. param .LC1
+ 39. t017 = call prints, 1
+ 40. t018 = 0
+ 41. i = t018
+ 42. t019 = 20
+ 43. if (i < t019) goto 49
+ 44. goto 54
+ 45. goto 54
+ 46. i = i + 1
+ 47. t020 = i
+ 48. goto 42
+ 49. t021 = i * 4
+ 50. param i
+ 51. t022 = call fib, 1
+ 52. f[t021] = t022
+ 53. goto 46
+ 54. t023 = 0
+ 55. i = t023
+ 56. t024 = 20
+ 57. if (i < t024) goto 63
+ 58. goto 70
+ 59. goto 70
+ 60. i = i + 1
+ 61. t025 = i
+ 62. goto 56
+ 63. t026 = i * 4
+ 64. t027 = f[t026]
+ 65. param t027
+ 66. t028 = call printi, 1
+ 67. param .LC2
+ 68. t029 = call prints, 1
+ 69. goto 60
+ 70. param .LC3
+ 71. t030 = call prints, 1
+ 72. t031 = 0
+ 73. i = t031
+ 74. t032 = 15
+ 75. if (i < t032) goto 81
+ 76. goto 86
+ 77. goto 86
+ 78. i = i + 1
+ 79. t033 = i
+ 80. goto 74
+ 81. t034 = i * 4
+ 82. param i
+ 83. t035 = call fact, 1
+ 84. fac[t034] = t035
+ 85. goto 78
+ 86. t036 = 0
+ 87. i = t036
+ 88. t037 = 15
+ 89. if (i < t037) goto 95
+ 90. goto 102
+ 91. goto 102
+ 92. i = i + 1
+ 93. t038 = i
+ 94. goto 88
+ 95. t039 = i * 4
+ 96. t040 = fac[t039]
+ 97. param t040
+ 98. t041 = call printi, 1
+ 99. param .LC2
+100. t042 = call prints, 1
+101. goto 92
+102. t043 = 0
+103. return t043
+104. main Ends
